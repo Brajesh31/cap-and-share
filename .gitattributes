@@ -1,0 +1,12 @@
+# Normalize text files across development environments.
+* text=auto eol=lf
+
+# Keep binary assets unchanged.
+*.gif binary
+*.ico binary
+*.jpeg binary
+*.jpg binary
+*.png binary
+*.webp binary
+*.woff binary
+*.woff2 binary
