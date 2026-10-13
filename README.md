@@ -99,3 +99,5 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before proposing a change. Report securi
 ## License
 
 The project source is offered under the MIT License. See [LICENSE](LICENSE). External image, font, and dependency assets may have separate terms; confirm their usage rights before redistribution.
+
+Last updated: 2026-10-13 16:00 UTC
