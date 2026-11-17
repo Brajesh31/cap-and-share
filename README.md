@@ -1,103 +1,280 @@
-# Cap'nShare
+<div align="center">
 
-Cap'nShare is a Vite, React, and TypeScript interface concept for sharing surplus food on a campus. It demonstrates a landing page, food listings and detail pages, mock login and signup, a dashboard, a food-post form, and a profile screen.
+<img src="docs/assets/capnshare-banner.svg" alt="Cap'nShare, Share more. Waste less." width="100%" />
 
-The repository contains browser-side code and sample data. Login, signup, posting, claiming, and profile flows are simulations. The project has no server, verified identity, food-safety review, durable listings, messaging, claim coordination, or notification service. Do not use the current interface to coordinate real food pickups or enter real personal information.
+# 🍱 Cap'nShare
 
-## Features represented in the interface
+### Share more. Waste less. Build a more thoughtful campus food community.
 
-- Responsive pages styled with Tailwind CSS.
-- Client-side routes for the landing page, authentication screens, dashboard, food listings, food detail, posting, profile, and a not-found page.
-- Search over the sample food titles and descriptions.
-- Location, distance, availability, and sort controls displayed on the listings screen.
-- Local mock user state and sample food cards.
-- Static landing-page impact figures, testimonials, contact details, and external food photos.
+A campus-oriented surplus-food sharing interface concept built with React, TypeScript, and Vite.
 
-The app currently applies the search term to the in-memory sample data. The other listing filters are interface controls only. Food data is imported from a fixed mock array. Posting a food item and requesting a claim wait briefly and show a success-like transition without saving a record or contacting another user. The login and signup screens accept the entered credentials through a mock context function; no account is created or verified.
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Prototype-orange)](ROADMAP.md)
 
-## Technology
+[📖 Documentation](docs/README.md) · [🗺️ Architecture](docs/architecture.md) · [🧪 Testing](docs/testing.md) · [🤝 Contributing](CONTRIBUTING.md) · [🔐 Security](SECURITY.md)
 
-- React 18 and React Router 6
-- TypeScript 5
-- Vite 5
-- Tailwind CSS 3 with PostCSS and Autoprefixer
-- Lucide React icons
-- ESLint 9
+</div>
 
-See package.json and package-lock.json for declared dependency ranges and locked versions.
+---
 
-## Run locally
+## 🌱 About the project
 
-Requirements: Git, Node.js compatible with the Vite version in the lockfile, and npm.
+Food surplus can happen after campus events, meetings, and shared meals. Cap'nShare explores how a campus community might make surplus portions visible to people who could use them.
 
-    git clone https://github.com/Brajesh31/cap-and-share.git
-    cd cap-and-share
-    npm ci
-    npm run dev
+The repository currently contains a **frontend prototype**, not a functioning food-exchange service. It demonstrates the user experience through sample food listings, detail pages, mock account screens, a dashboard, and donor/recipient-oriented forms.
 
-Open the local URL printed by Vite, usually http://localhost:5173. No database or environment variable is needed by the current code.
+> [!WARNING]
+> **Prototype only:** Login, signup, posting, claiming, and profile flows are simulated. There is no backend, verified identity, durable listing storage, food-safety review, messaging, or pickup coordination. Do not use this interface to arrange real food pickups or enter real personal information.
 
-## Available scripts
+## ✨ What the interface demonstrates
 
-- npm run dev starts the Vite development server.
-- npm run build creates a production bundle in dist.
-- npm run preview serves the most recent production build locally.
-- npm run lint runs ESLint.
+| Area | Current behavior |
+|---|---|
+| 🏠 Landing page | Project introduction, sample impact figures, testimonials, and calls to action |
+| 🔐 Login and signup | Mock authentication through a client-side context |
+| 📊 Dashboard | Static sample metrics and food posts |
+| 🔎 Food discovery | Sample listings and title/description search |
+| 🍲 Food details | Detail view for sample records |
+| 🙋 Claim interaction | Simulated confirmation, no request is sent or persisted |
+| ➕ Post food | Form demonstration, no listing is created |
+| 👤 Profile | Mock profile and local UI state |
+| 📱 Responsive layout | Tailwind-based responsive interface |
 
-There is no test script or automated test suite in the package manifest.
+### Current implementation boundaries
 
-## Routes
-
-| Path | Screen |
-| --- | --- |
-| / | Landing page |
-| /login | Demo login form |
-| /signup | Demo signup form |
-| /dashboard | Dashboard with fixed sample metrics and posts |
-| /food | Sample food listings and title/description search |
-| /food/:id | Sample food details and simulated claim request |
-| /post-food | Food-post form with simulated completion |
-| /profile | Mock profile and fixed statistics |
-| Any other path | Not-found page |
-
-The route table is defined in src/App.tsx. Routes are rendered inside a shared Header and Footer. The routes are not access-controlled; typing /dashboard, /post-food, or /profile directly does not require authentication.
-
-## Project structure
-
-    index.html                    HTML shell and Google Fonts link
-    src/main.tsx                  React entry point and global CSS import
-    src/App.tsx                    Auth context, shared shell, and route table
-    src/context/AuthContext.tsx    Simulated auth state stored in localStorage
-    src/types/food.ts              FoodPost TypeScript shape
-    src/data/mockData.ts           Fixed sample food listings
-    src/pages/                     Route-level screens
-    src/components/                Shared layout and food card components
-    src/index.css                  Tailwind directives
-    tailwind.config.js             Tailwind content paths and theme
-    docs/                          Project and operational guides
-
-Read the [architecture guide](docs/architecture.md), [installation guide](docs/installation.md), and [development guide](docs/development.md) for implementation details.
-
-## Important prototype limitations
-
-- The auth context accepts any submitted email and password after a delay. It stores a demo profile in browser localStorage; it does not verify credentials or protect routes.
-- The post-food screen navigates to the dashboard after a delay but does not add the submitted item to the listings.
-- The claim screen displays “Request sent” after a delay but does not send or store a request.
-- Profile edits and statistics are local or hard-coded. Edits are not saved to the auth profile.
-- Location, distance, availability-time, and sort controls do not filter or sort the listings. Only title and description search is applied.
+- Search filters the in-memory sample data by title and description.
+- Location, distance, availability-time, and sort controls are visual controls only.
+- Food posts come from a fixed array in `src/data/mockData.ts`.
+- Login/signup accept form input through a mock context. No account is created or verified.
+- The mock profile is stored in browser `localStorage`; it is not a secure session.
+- Posting and claiming show success-like UI transitions without saving data or contacting another user.
+- The app does not enforce route authorization.
 - Landing-page impact figures and testimonials are static sample content, not measured results.
-- Photos are hotlinked from Pexels. The page also requests Inter from Google Fonts.
-- The footer points to routes such as feedback, FAQ, terms, privacy, and contact that are not in the app route table. Its menu download target is absent from this repository.
-- index.html points to /vite.svg, but this repository does not contain that asset.
 
-See [troubleshooting](docs/troubleshooting.md), [deployment](docs/deployment.md), and [security](SECURITY.md) before sharing or hosting the interface.
+## 🖼️ Project visual
 
-## Contributing and security
+<div align="center">
+  <img src="docs/assets/food-sharing-illustration.svg" alt="Illustration representing people sharing food" width="78%" />
+</div>
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) before proposing a change. Report security issues privately as described in [SECURITY.md](SECURITY.md). Do not post sensitive details in public issues.
+## 🧰 Technology stack
 
-## License
+| Technology | Purpose |
+|---|---|
+| React 18 | Component-based UI |
+| TypeScript 5 | Static typing |
+| Vite 5 | Development server and production bundler |
+| React Router 6 | Client-side routing |
+| Tailwind CSS 3 | Utility-first styling |
+| Lucide React | Interface icons |
+| ESLint 9 | Static code-quality checks |
 
-The project source is offered under the MIT License. See [LICENSE](LICENSE). External image, font, and dependency assets may have separate terms; confirm their usage rights before redistribution.
+Declared dependency ranges and exact lockfile resolutions are maintained in `package.json` and `package-lock.json`.
 
-Last updated: 2026-11-17 09:36 UTC
+## 🚀 Getting started
+
+### Prerequisites
+
+- Git
+- Node.js compatible with the Vite version declared in the lockfile
+- npm
+
+No database, API server, or environment variable is required for the current prototype.
+
+### Installation
+
+```bash
+git clone https://github.com/Brajesh31/cap-and-share.git
+cd cap-and-share
+npm ci
+npm run dev
+```
+
+Open the local URL printed by Vite, usually `http://localhost:5173`.
+
+### Available commands
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Generate the production bundle in `dist/` |
+| `npm run preview` | Preview the latest production build |
+| `npm run lint` | Run ESLint |
+
+There is currently no test runner or test script. A successful build is not proof that every user journey works.
+
+## 🧭 Application routes
+
+| Route | Screen | Current behavior |
+|---|---|---|
+| `/` | Landing | Project introduction and sample content |
+| `/login` | Login | Mock login form |
+| `/signup` | Signup | Mock signup form |
+| `/dashboard` | Dashboard | Static sample dashboard |
+| `/food` | Food listings | Sample list and text search |
+| `/food/:id` | Food details | Sample detail and simulated claim |
+| `/post-food` | Post food | Form with simulated completion |
+| `/profile` | Profile | Mock profile and fixed statistics |
+| Other paths | Not found | Fallback screen |
+
+Routes are defined in `src/App.tsx`. The dashboard, post-food, and profile paths are not protected by authentication.
+
+## 🏗️ Project structure
+
+```text
+cap-and-share/
+├── .github/
+│   ├── ISSUE_TEMPLATE/             # Bug, feature, and security issue guidance
+│   ├── workflows/                  # Repository automation
+│   └── pull_request_template.md
+├── docs/
+│   ├── assets/                     # Original SVG project visuals
+│   ├── diagrams/                   # Mermaid architecture and workflow diagrams
+│   ├── runbooks/                   # Operational and troubleshooting procedures
+│   ├── templates/                  # Reusable project/review templates
+│   ├── accessibility.md
+│   ├── api.md
+│   ├── architecture.md
+│   ├── database.md
+│   ├── deployment.md
+│   ├── development.md
+│   ├── food-safety.md
+│   ├── installation.md
+│   ├── observability.md
+│   ├── privacy.md
+│   ├── product-requirements.md
+│   ├── release-process.md
+│   ├── testing.md
+│   ├── threat-model.md
+│   └── troubleshooting.md
+├── src/
+│   ├── components/
+│   │   ├── food/                   # Food cards
+│   │   └── layout/                 # Shared header and footer
+│   ├── context/                    # Mock authentication context
+│   ├── data/                       # Static food data
+│   ├── pages/
+│   │   ├── auth/
+│   │   ├── dashboard/
+│   │   ├── food/
+│   │   └── profile/
+│   ├── types/                      # TypeScript domain types
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── index.html
+├── package.json
+├── package-lock.json
+├── tailwind.config.js
+├── tsconfig*.json
+└── vite.config.ts
+```
+
+The tree above is a guide to the repository's organization. Consult the actual source tree for the complete file list.
+
+## 🔄 Current user journey
+
+```mermaid
+flowchart TD
+    A[Open Cap'nShare] --> B[Browse sample food]
+    B --> C[Search title or description]
+    C --> D[Open food details]
+    D --> E[Enter claim form]
+    E --> F[Show local confirmation]
+    F --> G[No request is sent or stored]
+    A --> H[Open post-food form]
+    H --> I[Enter sample details]
+    I --> J[Simulated completion]
+    J --> K[No listing is persisted]
+```
+
+The dotted boundary is intentional: the current UI demonstrates interaction states, not a completed exchange.
+
+## 📚 Documentation library
+
+Start at the [documentation hub](docs/README.md).
+
+| Category | Documentation |
+|---|---|
+| 🧱 Engineering | [Architecture](docs/architecture.md) · [Development](docs/development.md) · [Installation](docs/installation.md) · [API boundaries](docs/api.md) · [Data and persistence](docs/database.md) |
+| 🧪 Quality | [Testing strategy](docs/testing.md) · [Accessibility](docs/accessibility.md) · [Troubleshooting](docs/troubleshooting.md) |
+| 🔐 Trust and safety | [Security](SECURITY.md) · [Threat model](docs/threat-model.md) · [Privacy](docs/privacy.md) · [Food safety](docs/food-safety.md) |
+| 🚀 Operations | [Deployment](docs/deployment.md) · [Release process](docs/release-process.md) · [Observability](docs/observability.md) · [Runbooks](docs/runbooks/README.md) |
+| 🧭 Product | [Product requirements](docs/product-requirements.md) · [FAQ](docs/faq.md) · [Glossary](docs/glossary.md) · [Roadmap](ROADMAP.md) |
+| 🧰 Reusable resources | [Templates](docs/templates/README.md) · [Diagrams](docs/diagrams/README.md) |
+
+## 🛡️ Safety, privacy, and security
+
+A real food-sharing service has responsibilities beyond rendering a listing card. Before any real-world pilot, the project would need:
+
+- Verified identity and server-side authorization.
+- Donor ownership checks and a durable claim lifecycle.
+- Clear ingredient/allergen disclosures and explicit unknown states.
+- Safe pickup, cancellation, reporting, and moderation processes.
+- Privacy-preserving handling of contact and pickup information.
+- Abuse prevention, rate limits, auditability, and incident response.
+- Qualified local review of food-safety requirements.
+
+The current prototype does not provide these controls. Read [Food Safety](docs/food-safety.md), [Privacy](docs/privacy.md), and [Threat Model](docs/threat-model.md).
+
+## 🧪 Quality checks
+
+Run the checks available in the repository:
+
+```bash
+npm ci
+npm run lint
+npm run build
+```
+
+Manual route, responsive, keyboard, and browser-console checks are also required for UI changes. The detailed [testing guide](docs/testing.md) distinguishes existing checks from future test coverage.
+
+## 🗺️ Roadmap
+
+The roadmap is maintained in [ROADMAP.md](ROADMAP.md). Broad next steps include:
+
+1. Validate the product problem with campus users.
+2. Define data ownership, identity, and authorization boundaries.
+3. Design a durable listing and claim lifecycle.
+4. Establish food-safety, privacy, and moderation procedures.
+5. Add backend/API and persistence only after requirements are validated.
+6. Introduce automated tests and CI quality gates.
+7. Run a limited, supervised pilot only after operational and safety review.
+
+## 🤝 Contributing
+
+Contributions are welcome. Before opening a pull request:
+
+1. Read [CONTRIBUTING.md](CONTRIBUTING.md).
+2. Check existing issues and the [roadmap](ROADMAP.md).
+3. Keep changes focused and preserve the prototype boundary in documentation.
+4. Run lint/build and describe exactly what you tested.
+5. Update relevant docs, diagrams, and templates.
+
+Use the [pull request template](.github/pull_request_template.md) to describe validation and risks.
+
+## 🔐 Reporting security issues
+
+Please do not publish exploitable security details in public issues. Follow the private reporting guidance in [SECURITY.md](SECURITY.md).
+
+## 📄 License and third-party assets
+
+Project source is offered under the [MIT License](LICENSE). Dependencies, externally hosted photos, fonts, and other third-party assets may have separate terms. Verify those terms before redistribution.
+
+---
+
+<div align="center">
+
+### 🌍 Share more. Waste less. Start with a better system.
+
+**Cap'nShare is a prototype for exploring responsible campus food sharing.**
+
+[⬆ Back to top](#-capnshare)
+
+</div>
+
+_Last updated: 2026-11-17_
