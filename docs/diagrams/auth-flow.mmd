@@ -1,0 +1,10 @@
+flowchart TD
+  A[Open login or signup screen] --> B[Submit form]
+  B --> C[AuthContext mock delay]
+  C --> D[Construct demo profile]
+  D --> E[Write user object to localStorage]
+  E --> F[Client UI considers user signed in]
+  F --> G[Logout]
+  G --> H[Remove localStorage user key]
+  X[No identity provider or credential verification] -. boundary .-> C
+  style X stroke-dasharray: 5 5
