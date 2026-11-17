@@ -8,9 +8,9 @@
 - Deployment target:
 
 ## Build and quality
-- [ ] `npm ci`
-- [ ] `npm run lint`
-- [ ] `npm run build`
+- [ ] npm ci
+- [ ] npm run lint
+- [ ] npm run build
 - [ ] Manual regression on affected routes
 - [ ] No unreviewed console/network errors
 

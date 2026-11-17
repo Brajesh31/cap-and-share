@@ -35,7 +35,6 @@ Describe keyboard, screen reader, contrast, zoom, and motion requirements.
 - [ ]
 
 ## Risks and alternatives
-List risks, assumptions, dependencies, and simpler alternatives.
 
 ## Validation plan
 Specify manual checks, automated tests (if available), and user research needed.

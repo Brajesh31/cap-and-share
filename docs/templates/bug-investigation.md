@@ -16,10 +16,8 @@ Describe the observed problem in one or two sentences.
 3.
 
 ## Expected behavior
-What should happen?
 
 ## Actual behavior
-What happens instead? Include the exact error text where safe.
 
 ## Evidence
 - Screenshot/video:
@@ -41,7 +39,6 @@ What happens instead? Include the exact error text where safe.
 - [ ] Reviewed recent related changes
 
 ## Proposed fix and regression coverage
-Describe the smallest safe fix and how it will be verified.
 
 ## Completion checklist
 - [ ] Root cause documented

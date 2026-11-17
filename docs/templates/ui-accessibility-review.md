@@ -23,7 +23,7 @@
 
 ## Food-sharing content review
 - [ ] Allergen uncertainty is explicit
-- [ ] No unsupported “safe/verified” claims
+- [ ] No unsupported safe/verified claims
 - [ ] Pickup information does not expose private addresses
 - [ ] Report/cancel pathways are understandable where applicable
 

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+<title id="title">Cap'nShare, Share more. Waste less.</title>
+<desc id="desc">A plate with fresh leaves on a deep green background.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#123d31"/><stop offset="1" stop-color="#2c8060"/></linearGradient><linearGradient id="plate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff8e8"/><stop offset="1" stop-color="#e8f2df"/></linearGradient></defs>
+<rect width="1200" height="360" rx="30" fill="url(#bg)"/><circle cx="1000" cy="180" r="150" fill="#a8d5a2" opacity=".12"/><circle cx="1000" cy="180" r="112" fill="url(#plate)"/><circle cx="1000" cy="180" r="88" fill="none" stroke="#7ba27b" stroke-width="3" opacity=".7"/>
+<path d="M958 182c-38-54 8-82 48-47 15-44 69-31 57 14-10 40-74 73-105 83-2-19-1-34 0-50z" fill="#64a66e"/><path d="M1000 133c-8 35-19 66-43 92" fill="none" stroke="#2f6848" stroke-width="5" stroke-linecap="round"/>
+<path d="M927 81c-34-42-76-16-56 18 18 28 48 30 73 14M1070 270c43 31 75-7 48-35-20-20-49-20-71-3" fill="none" stroke="#cde7b8" stroke-width="7" stroke-linecap="round"/>
+<text x="78" y="139" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="64" font-weight="800">Cap'nShare</text><text x="82" y="196" fill="#d9f1d8" font-family="Inter,Arial,sans-serif" font-size="30">Share more. Waste less.</text><text x="84" y="254" fill="#fff" opacity=".82" font-family="Inter,Arial,sans-serif" font-size="19">A campus surplus-food sharing prototype</text><path d="M84 286h250" stroke="#f0d18d" stroke-width="6" stroke-linecap="round"/>
+</svg>

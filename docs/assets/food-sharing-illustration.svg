@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+<title id="title">Illustration of food sharing</title><desc id="desc">Two people sharing food represented by a bowl of vegetables and a heart.</desc>
+<rect width="900" height="520" rx="28" fill="#f3f8ee"/><circle cx="450" cy="240" r="170" fill="#dbeed5"/><path d="M278 275h344c-9 95-65 137-172 137s-163-42-172-137z" fill="#fffdf4" stroke="#47785c" stroke-width="9"/><path d="M294 284h312" stroke="#b8d4aa" stroke-width="10" stroke-linecap="round"/>
+<circle cx="390" cy="230" r="38" fill="#e9a84d"/><circle cx="486" cy="220" r="34" fill="#db6c52"/><circle cx="443" cy="250" r="31" fill="#75a85e"/><path d="M388 198c-18-24-35-12-26 9 12 18 33 14 42-1M487 188c-14-20-31-9-25 9 9 15 27 14 36-1M439 221c-14-19-28-8-23 8 8 15 25 11 32-1" fill="#4d8b58"/>
+<circle cx="176" cy="180" r="42" fill="#d9a47d"/><path d="M114 355c0-72 22-118 62-118s62 46 62 118" fill="#477b60"/><circle cx="724" cy="180" r="42" fill="#b87956"/><path d="M662 355c0-72 22-118 62-118s62 46 62 118" fill="#e2b95f"/><path d="M242 281c52-49 86-48 132-22M658 281c-52-49-86-48-132-22" fill="none" stroke="#47785c" stroke-width="12" stroke-linecap="round"/>
+<path d="M450 104c-27-36-72 2-43 33l43 39 43-39c29-31-16-69-43-33z" fill="#e08065"/><text x="450" y="470" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="24" font-weight="700" fill="#27543d">Good food deserves a second table.</text>
+</svg>
