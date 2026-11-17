@@ -1,0 +1,13 @@
+flowchart TD
+  A[Visitor opens Cap'nShare] --> B[Browse sample food]
+  B --> C[Search title or description]
+  C --> D[Open food detail]
+  D --> E[Enter claim form]
+  E --> F[Local confirmation state]
+  F --> G[No request is sent or stored]
+  A --> H[Open post-food form]
+  H --> I[Enter sample listing details]
+  I --> J[Simulated completion]
+  J --> K[No listing is persisted]
+  style G stroke-dasharray: 5 5
+  style K stroke-dasharray: 5 5
