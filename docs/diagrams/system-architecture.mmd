@@ -1,0 +1,17 @@
+flowchart TD
+  A[index.html] --> B[src/main.tsx]
+  B --> C[src/App.tsx]
+  C --> D[AuthProvider]
+  C --> E[BrowserRouter]
+  E --> F[Shared Header and Footer]
+  E --> G[Landing and Auth Pages]
+  E --> H[Dashboard and Post Form]
+  E --> I[Food Listing and Details]
+  E --> J[Profile Page]
+  H --> K[mockFoodPosts]
+  I --> K
+  J --> D
+  D --> L[Browser localStorage: user]
+  K --> M[Static sample records]
+  style L stroke-dasharray: 5 5
+  style M stroke-dasharray: 5 5
