@@ -36,7 +36,17 @@ Welcome to the project documentation. This directory describes the implementatio
 - [Project banner](assets/capnshare-banner.svg)
 - [Food-sharing illustration](assets/food-sharing-illustration.svg)
 
+## 🚀 Operational runbooks
+
+- [Runbook index](runbooks/README.md)
+- [Local development](runbooks/local-development.md)
+- [Static deployment](runbooks/static-deployment.md)
+- [Incident response](runbooks/incident-response.md)
+- [Food-safety report handling](runbooks/safety-report.md)
+
 ## 🧰 Templates
+
+See the [template index](templates/README.md) for usage guidance.
 
 The templates directory contains reusable checklists and review documents:
 - [Bug investigation](templates/bug-investigation.md)
