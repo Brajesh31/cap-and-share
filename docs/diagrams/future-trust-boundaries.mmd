@@ -1,0 +1,14 @@
+flowchart LR
+  U[Browser user] -->|TLS and session| API[Future application API]
+  API --> AUTH[Identity and authorization]
+  API --> DB[(Future database)]
+  API --> MOD[Moderation and reporting]
+  API --> NOTIFY[Optional notification provider]
+  MOD --> OPS[Accountable operations team]
+  DB --> PRIV[Retention and deletion controls]
+  style API stroke-dasharray: 5 5
+  style AUTH stroke-dasharray: 5 5
+  style DB stroke-dasharray: 5 5
+  style MOD stroke-dasharray: 5 5
+  style NOTIFY stroke-dasharray: 5 5
+  style OPS stroke-dasharray: 5 5
